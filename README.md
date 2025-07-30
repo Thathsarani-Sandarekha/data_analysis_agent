@@ -51,6 +51,61 @@ An AI-powered web application that allows users to ask natural language question
 
 ---
 
+## Setting up and Running the project
+### 🌐 Frontend Setup
+#### 1. Open a new terminal and go to the frontend directory
+```bash
+cd ../frontend
+```
+
+#### 2. Install frontend dependencies
+```bash
+npm install
+```
+
+### ⚙️ Backend Setup
+
+#### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name/backend
+```
+
+#### 2. Create a virtual environment (you can use conda too) and activate it
+```bash
+python -m venv venv
+source venv/bin/activate 
+```
+
+#### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+#### 4. Set environment variables in .env
+Create a .env file in the backend/ folder with the following content:
+```
+env
+GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL=llama3-70b-8192
+```
+If you're using OpenAI instead of Groq, adjust the base URL and key in llm_client.py.
+
+#### 5. Ensure your sensor data is in this path:
+
+backend/
+└── sensor-data/
+    ├── Room A.ndjson
+    ├── Room B.ndjson
+    └── ...
+
+#### 7. Run the backend server
+```bash
+uvicorn api_server:app --reload --port 8000
+```
+
+---
+
 ## 👨‍💻 Author
 
 Built with ❤️ by **Thathsarani Sandarekha**  
