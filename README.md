@@ -1,1 +1,58 @@
-# data_analysis_agent
+# 🌿 Air Quality Data Assistant
+
+An AI-powered web application that allows users to ask natural language questions about air quality sensor data across multiple rooms. The system uses LLMs to generate, execute, and summarize data analyses — all without needing a database.
+
+---
+
+## 🚀 Features
+
+- ✅ Upload `.ndjson` files (1 per room) — each line is a JSON object with timestamped sensor readings.
+- ✅ Ask natural language questions like:
+  - "How does CO2 vary by day of the week?"
+  - "Which room had the highest temperature last week?"
+- ✅ Automatically detects whether a **table**, **chart**, or both are needed.
+- ✅ Summarizes results in plain English using LLM-generated reasoning.
+- ✅ Supports inconsistent field names using semantic normalization.
+- ✅ Includes clean error handling and chart/table formatting.
+
+---
+
+## 🧠 How It Works
+
+### 🔄 Flow
+
+1. **Upload**: User uploads one or more `.ndjson` files.
+2. **Normalization**: Field names are auto-mapped to standard terms (`CO2`, `Temperature`, `Humidity`, etc.).
+3. **Query Understanding**: LLM detects whether a chart is needed.
+4. **Code Generation**: LLM writes pandas/matplotlib code based on data and query.
+5. **Execution**: Generated code is run in a safe environment.
+6. **Response Packaging**: Table is prettified, chart is saved, and summary is generated.
+
+---
+
+## 🧪 Example Questions
+
+- How does CO2 in Room 1 vary by day of the week?
+- How do average CO2 levels, humidity, and temperature vary across different rooms?
+- Give daily CO2 levels for Room 1 and Room 2 between July 10 and July 15.
+- Which room had the highest temperature reading on July 12?
+- Which room had the biggest variation in CO2 levels?
+- List the rooms in order of hottest to coolest using average temperature in a day.
+- What is the average temperature of each room in mornings and evenings?
+
+---
+
+## 🤖 LLM Details
+
+- **Model**: `llama3-70b-8192` via Groq API  
+- **Temperature**: `0.2` (for deterministic, clean outputs)  
+- **Prompting**: Structured with schema, preview, and strict rule sets  
+- **Tools**: Code generation, summarization, reasoning  
+
+---
+
+## 👨‍💻 Author
+
+Built with ❤️ by **Thathsarani Sandarekha**  
+BSc (Hons) AI & Data Science | Aspiring Machine Learning Engineer and Researcher
+

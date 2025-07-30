@@ -1,0 +1,14 @@
+.App {
+  min-height: 100vh;
+  background-color: #f7f9fc;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Remove unused animations and legacy styles */
+.App-logo {
+  display: none;
+}
