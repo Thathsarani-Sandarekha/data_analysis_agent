@@ -92,7 +92,13 @@ If you're using OpenAI instead of Groq, adjust the base URL and key in llm_clien
 
 #### 3. Ensure your sensor data is in this path:
 
-<pre><code>``` backend/ └── sensor-data/ ├── Room A.ndjson ├── Room B.ndjson └── ... ```</code></pre>
+```
+backend/
+└── sensor-data/
+    ├── Room A.ndjson
+    ├── Room B.ndjson
+    └── ...
+```
 
 #### 4. Run the backend server
 ```bash
